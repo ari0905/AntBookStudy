@@ -1,5 +1,6 @@
 #Chap 1-6
 #p21
+"""
 n = int(input())
 a = list(map(int, input().split()))
 ans = 0
@@ -13,3 +14,18 @@ for i in range(n):
             if rest > ma:
                 ans = max(ans, length)
 print(ans)
+"""
+#p23
+
+L = int(input())
+n = int(input())
+x = list(map(int, input().split()))
+
+minT, maxT = 0, 0
+
+for i in range(n):
+    minT = max(minT, min(x[i], L - x[i]))
+    maxT = max(maxT, max(x[i], L - x[i]))
+
+print("min = {}".format(minT))
+print("max = {}".format(maxT))
